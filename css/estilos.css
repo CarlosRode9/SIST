@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Bebas+Neue&display=swap');
+
+/* Animacion */
+
+/* Fade en contenidos */
+
+@-webkit-keyframes fade-in {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-bck {
+    0% {
+      -webkit-transform: translateZ(80px);
+              transform: translateZ(80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-bck {
+    0% {
+      -webkit-transform: translateZ(80px);
+              transform: translateZ(80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+/* Boton de Wsp */
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+    30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    }
+}
+
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    10% {margin-left: 0;}
+    
+    45% {margin-left: -100%;}
+    55% {margin-left: -100%;}
+    
+    70% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+    
+}
+
+
+@keyframes slide1 {
+    0% {margin-right: 0;}
+    10% {margin-right: 0;}
+    
+    45% {margin-right: -100%;}
+    55% {margin-right: -100%;}
+    
+    70% {margin-right: -200%;}
+    100% {margin-right: -200%;}
+    
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style:none;
+    font-style: italic;
+    font-family: "PermianSlabSerifTypeface";
+    
+}
+
+
+
+body{
+    margin-left: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-image: url(../img/Background.png) ;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: absolute;
+}
+
+/* menu */
+
+header{
+    width: 100%;
+    height: 80px;
+    left: 5.5px;
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    z-index: 350;
+    margin-right: 20px;
+}
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon__menu i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu{
+    width: 80px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: blanchedalmond;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    border-right: 20px solid black;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.nav_list{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.nav_list a{
+    color: #ffffffb2;
+    cursor: pointer;
+    display: relative;
+}
+
+.nav_list a:hover{
+    color: white;
+}
+
+.nav_list .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: center;
+}
+
+.nav_list .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+a.selected{
+    color: #fff;
+}
+
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height:20px;
+    background: rgb(209, 209, 209);
+    position: absolute;
+    left: 10px;
+}
+
+span{
+    font-weight: 300;
+    cursor: pointer;
+    position: absolute;
+}
+
+.body_move{
+        margin: 250px;
+}
+
+.menu_move{
+        width: 250px;
+}
+
+/* CONTENINO HOME */
+
+#page-content{
+    position: fixed;
+    left: 30%;
+    top: 40%;
+    bottom: 20%;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+}
+
+/* Icono Wsp */
+
+.wsp{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0df053;
+    color: #fff;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 2px;
+    z-index: 300;
+}
+
+.wsp i{
+    text-align: center;
+    font-size: 20px;
+}
+
+.wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background-color: white;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+}
+
+
+/* footer */
+
+footer{ 
+    position: fixed;
+    font-size: 18px;
+    text-align: center;
+    margin-top: auto;
+    top: 95%;
+    left: 50%;
+}
+
+.footer i{
+    padding: 2px;
+    color: rgb(150, 150, 150);
+}
+
+.footer:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+/* Nosotros */
+
+#page-content__{
+    display: grid;
+    position: fixed;
+    left: 25%;
+    top: 30%;
+    bottom: 20%;
+    box-sizing: border-box;
+    width: 60%;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.page-content__{
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+}
+
+.parrafo{
+    font-size: 18px;
+        color: rgb(255, 255, 255);
+        margin: 50px;
+}
+
+p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin: 30px;        
+}
+
+h1{
+    margin: 80px ;
+    color: #fff;
+}
+
+
+h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10%;
+}
+
+/* Clientes */
+
+.slider-frame {
+    position: fixed;
+    background-color: #fff;
+    width: 70%;
+    height: auto;
+    left: 20%;
+    top: 20%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #000;
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+    
+.slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        
+        animation: slide 20s infinite alternate ease-in-out;
+}
+    
+.slider-frame li {
+        width: 100%;
+        list-style: none;
+}
+    
+.slider-frame img {
+        width: 100%;
+}
+    
+/* Servicios */
+
+.page-content_servicios{
+    position: fixed;
+    left: 25%;
+    top: 10%;
+    bottom: 20%;
+    box-sizing: border-box;
+    width: 60%;
+    height: 80%;
+    overflow: hidden scroll;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.page-content_servicios::-webkit-scrollbar{
+    width: 5px;
+}
+
+.page-content_servicios::-webkit-scrollbar-thumb{
+    background-color: rgb(223, 223, 223);
+    border-radius: 50px;
+}
+
+
+.page-content_servicios{
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+}
+
+.ListaServicios{
+    position: fixed;
+    top: 68%;
+    left: 30%;
+	display: grid;
+    justify-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+h3{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+}
+
+hr{
+    margin: 50px;
+    top: 20px;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+}
+
+.subir{
+    color:rgb(255, 255, 255);
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    right: 12%;
+    bottom: 10%;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    box-shadow: 0 10px 30px #000;
+}
+
+.subir:hover{
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+}
+
+
+.texto_servicio{
+    display: grid;
+    text-align: center;
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+}
+/* Contacto */
+
+form{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 20px 
+}  
+    
+    
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+
+}
+
+#boton{
+    padding: 20px;
+    cursor: pointer;
+}
+
+#boton:hover{
+    color: #fff;
+    background-color: rgb(121, 121, 121);
+}
+
+#Formulario_{
+    position: fixed;
+    box-sizing: border-box;
+    font-size: auto;
+    width: auto;
+    height: 100%;
+    left: 25%;
+    top: 20px;
+    bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    z-index: 300;
+}
+
+.Formulario_{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: rgb(252, 252, 252);
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+/* GALERIA */
+
+.contenedor-galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    position: fixed;
+    left: 25%;
+    bottom: 1%;
+    width: 650px;
+    padding: 50px;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    z-index: 300;
+}
+
+.contenedor-galeria{
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.galeria-img{
+    position: static;
+    width: 100%;
+    height: 100%;
+    margin-top: 30%;
+    object-fit: cover;
+    padding: 2px;
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 0 0 8px rgb(0, 0, 0.8);
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    z-index: 300;
+
+}
+
+.galeria-img:hover{
+	-webkit-animation: fade-in-bck 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in-bck 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+@media all and (max-width:768px){
+
+
+
+
+   /*  menu */
+
+
+    .body_move{
+    margin-left: 0px;
+    }
+
+    .menu_move{
+    width: 80px;
+    left: -80px;
+    }
+
+    /* footer */
+
+    footer{ 
+        display: grid;
+        left: 30px;
+        bottom: 100px;
+    }
+
+    .footer i{
+    padding: 2px;
+    color: rgb(150, 150, 150);
+    }
+
+    .footer:hover{
+    color: rgb(255, 255, 255);
+    }   
+
+    /*  home */
+
+    #page-content img{
+        width: auto;
+        height: 120px;
+    }
+
+    /* nosotros */
+
+    #page-content__{
+        position: fixed;
+        top: 60px;
+        width: 350px;
+        height: 400px;
+    }
+
+    /*  Servicios */
+
+    .page-content_servicios{
+        position: fixed;
+        top: 10px;
+        width: 350px;
+        height: 480px;
+    }
+
+    #info{
+        font-size: 12px;
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+    h2{
+        font-size: 21px;
+    }
+    
+    h3{
+        font-size: 10px;
+    }
+    
+    .subir{
+        display: flex;
+        left: 80%;
+        width: 20px;
+        height: auto;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 300;
+    }
+
+    /* contacto */
+    #Formulario_{
+        display: grid;
+        position: fixed;
+        top: auto;
+        width: 350px;
+        height: 450px;
+    }
+
+    textarea{
+        height: 100px;
+    }
+    
+    h4{
+        font-size: 25px;
+    }
+
+
+    .contenedor-galeria{
+        display: grid;
+        position: fixed;
+        width: 450px;
+        height: 100%;
+        left: 25%;
+        right: 1%;
+    }
+
+    .galeria-img{
+        position: relative;
+        object-fit: cover;
+        padding: 3px;
+        width: 160px;
+        height: 100%;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        background-color: #fff;
+    }
+
+}
+
+@media all and (max-width:425px){
+
+    body{
+        background-image: url(/img/celular.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    /* MENU */
+    .icon__menu i{
+        font-size: 13px;
+        z-index: 360;
+    }
+
+    .menu{
+        font-size: 13px;
+        z-index: 200;
+    }
+
+    /* HOME */
+
+    #page-content img{
+        width: 200px;
+        height: auto;
+    }
+
+    /* footer */
+
+    footer{ 
+        display: grid;
+        left: 30px;
+        bottom: 100px;
+    }
+
+    .footer i{
+    font-size: 13px;
+    padding: 2px;
+    color: rgb(150, 150, 150);
+    }
+
+    .footer:hover{
+    color: rgb(255, 255, 255);
+    }   
+    /* WSP */
+
+    .wsp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+    }
+    .wsp i{
+        font-size: 12px;
+    }
+
+    /* nosotros */
+
+    #page-content__{
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+
+    /*  Servicios */
+
+    .page-content_servicios{
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+
+    #info{
+        font-size: 12px;
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+    h2{
+        font-size: 21px;
+    }
+    
+    h3{
+        font-size: 10px;
+    }
+    
+    .subir{
+        display: flex;
+        bottom: 10px;
+        left: 210px;
+        width: 20px;
+        height: auto;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 300;
+    }
+
+    /* contacto */
+    #Formulario_{
+        display: grid;
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        z-index: 100;
+    }
+
+
+    .contenedor-galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        overflow: hidden scroll;
+        z-index: 100;
+
+    }
+
+    .galeria-img{
+        object-fit: cover;
+        left: 10px;
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+    }
+
+}
