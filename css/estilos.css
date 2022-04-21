@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 
 /* Animacion */
 
@@ -144,16 +145,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style:none;
-    font-style: italic;
-    font-family: "PermianSlabSerifTypeface";
     
+}
+
+/* VIDEO BG */
+
+.videobg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: rgb(224, 224, 224);
+    overflow: hidden;
 }
 
 
 
-body{
+.Contenido{
+    max-width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    margin: auto;
+
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: ;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.video video{
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(27, 27, 27);
+    opacity: .75;
+    z-index: 1;
+}
+
+.Contenido s{
+    text-decoration: none;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 70px;
+    margin-bottom: 0;
+    text-shadow: 10px;
+}
+
+.Contenido p{
+    display: block;
+    padding-bottom: 2rem;
+
+}
+
+.videobg .Contenido{
+    display: block;
+    z-index: 2;
+}
+
+.Bton:hover{
+    background-color: rgb(49, 49, 49);
+    color: rgb(197, 197, 197);
+}
+
+.Bton{
+    text-decoration: none;
+    background-color: rgb(43, 43, 43);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: rgb(216, 216, 216);
+    box-shadow: 0 10px 30px #000;
+    text-shadow: 2px;
+}
+
+
+
+#body{
     margin-left: 80px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
     background-image: url(../img/Background.png) ;
@@ -162,6 +245,8 @@ body{
     overflow: hidden;
     position: absolute;
 }
+
+
 
 /* menu */
 
@@ -200,7 +285,6 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    color: blanchedalmond;
     font-size: 18px;
     z-index: 300;
     overflow: hidden;
@@ -607,7 +691,7 @@ h4{
 }
 
 @media all and (max-width:768px){
-
+    
 
 
 
@@ -733,7 +817,7 @@ h4{
 
 @media all and (max-width:425px){
 
-    body{
+    #body{
         background-image: url(/img/celular.jpg);
         background-size: cover;
         background-attachment: fixed;
