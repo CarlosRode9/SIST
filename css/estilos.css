@@ -778,8 +778,6 @@ h4{
 
     /* contacto */
     #Formulario_{
-        display: grid;
-        position: fixed;
         top: auto;
         width: 45%;
         height: 90%;
@@ -793,26 +791,6 @@ h4{
         font-size: 25px;
     }
 
-
-    .contenedor-galeria{
-        display: grid;
-        position: fixed;
-        width: 450px;
-        height: 100%;
-        left: 25%;
-        right: 1%;
-    }
-
-    .galeria-img{
-        position: relative;
-        object-fit: cover;
-        padding: 3px;
-        width: 160px;
-        height: 100%;
-        margin-top: 0px;
-        margin-bottom: 2px;
-        background-color: #fff;
-    }
 
 }
 
@@ -883,13 +861,11 @@ h4{
     /* nosotros */
 
     #page-content__{
-        position: fixed;
         top: 1%;
         left: 1%;
         width: 98%;
         height: 98%;
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
+
     }
 
     /*  Servicios */
